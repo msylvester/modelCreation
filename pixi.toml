@@ -1,0 +1,15 @@
+[project]
+channels = ["conda-forge"]
+description = "Add a short description here"
+name = "modelCreation"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.13.0,<3.14"
+numpy = ">=2.1.3,<3"
+scikit-learn = ">=1.5.2,<2"
+joblib = ">=1.4.2,<2"
+pandas = ">=2.2.3,<3"
