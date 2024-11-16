@@ -63,7 +63,7 @@ def save_model(model, scaler, model_filename='knn_model.pkl', scaler_filename='s
     print(f"Model saved to '{model_filename}' and scaler saved to '{scaler_filename}'.")
 
 
-def predict_sets_for_parts(knn_model, scaler, parts_list, df, n_results=5):
+def predict_sets_for_parts(knn_model, scaler, parts_list, df, y, n_results=5):
     """
     Predict the most similar sets for a given list of parts.
     
@@ -113,7 +113,7 @@ def main():
         # Add more parts and their quantities as needed
     }
 
-    closest_set_ids = predict_sets_for_parts(knn_model, scaler, parts_list, df)
+    closest_set_ids = predict_sets_for_parts(knn_model, scaler, parts_list, df, y)
     print(f"Closest set IDs for the given parts list: {closest_set_ids}")
 
 
